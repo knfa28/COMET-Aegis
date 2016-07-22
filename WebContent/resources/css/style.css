@@ -22,6 +22,7 @@
 div#navbar 
 {
   background-color: #004080;
+  z-index: 5;
 }
 
 div#navbar div#container div#navbar-header a, div#navbar div#container div#navbar-ex-collapse ul#leftnav li a
@@ -173,25 +174,20 @@ div#signup h1
 div#content
 {
 	height: 100%;
+	z-index: 0;
 }
 
 /*Map*/
-#mapid 
-{
- height: 90%;
- width: 100%;
- z-index: -1; 
-}
-
-/*Map*/
-/*#map 
+#map 
 {
     position:absolute;
     top:0;
     bottom:0;
     width:100%;
-    z-index: -1;
-}*/
+}
+
+body { margin:0; padding:0; }
+
 /**
 * Set rules for how the map overlays
 * (info box and legend) will be displayed

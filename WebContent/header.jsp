@@ -8,16 +8,16 @@
 	<title>Aegis</title>
 	<link rel="stylesheet" href="<c:url value="/resources/css/style.css" />" />
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
     rel="stylesheet" type="text/css">
     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
     rel="stylesheet" type="text/css">
-	<script src="<c:url value="/resources/js/login.js" />" type="text/javascript"></script> 
-	<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" /> 
-	<script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+	<script src="<c:url value="/resources/js/login.js" />" type="text/javascript"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> 
 </head>
 <body>
 
