@@ -16,8 +16,6 @@
     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
     rel="stylesheet" type="text/css">
 	<script src="<c:url value="/resources/js/login.js" />" type="text/javascript"></script>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> 
 </head>
 <body>
 
@@ -35,13 +33,13 @@
         <div id="icons" data-toggle="collapse" data-target="#navbar-ex-collapse">
             <ul id="icons-nav">
               <li>
-                  <a href=""><div id="flood"></div></a>
+                  <div id="flood"></div>
               </li>
               <li>
-                <a href=""><div id="storm"></div></a>
+                <div id="storm"></div>
               </li>
               <li>
-                <a href=""><div id="earthquake"></div></a>
+                <div id="earthquake"></div>
               </li>
             </ul>
         </div>
@@ -51,7 +49,7 @@
 			</li>
 			
 			<li>
-				<a href="#">Contact Numbers</a>
+				<a href="contactNumbers.jsp">Contact Numbers</a>
 			</li>
 			
 			<li>

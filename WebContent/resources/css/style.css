@@ -45,7 +45,7 @@ div#navbar div#container div#icons ul#icons-nav
       display: inline-block;
       padding: 0 10px 0 10px; 
     }
-        div#navbar div#container div#icons ul#icons-nav li a div#flood
+        div#navbar div#container div#icons ul#icons-nav li div#flood
         {
             background: url("../icons/Flood.png");
             height: 50px;
@@ -53,7 +53,7 @@ div#navbar div#container div#icons ul#icons-nav
             border-radius: 50px;
             background-size: cover;
         }
-        div#navbar div#container div#icons ul#icons-nav li a div#storm 
+        div#navbar div#container div#icons ul#icons-nav li div#storm 
         {
             background: url("../icons/Storm.png");
             height: 50px;
@@ -61,7 +61,7 @@ div#navbar div#container div#icons ul#icons-nav
             border-radius: 50px;
             background-size: cover;
         }
-        div#navbar div#container div#icons ul#icons-nav li a div#earthquake 
+        div#navbar div#container div#icons ul#icons-nav li div#earthquake 
         {
             background: url("../icons/Earthquake.png");
             height: 50px;
@@ -107,10 +107,9 @@ div.loginBox
 {
   width: 350px;
   height: 280px;
-  background-color: #014e72;
+  background-color: #004080;
   box-sizing: border-box;
   padding: 10px;
-  color: #FFF;
   
 }
   div.loginBox div.form-text 
@@ -119,6 +118,7 @@ div.loginBox
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 120%;
+  	color: #FFFFFF;
      
   }
   div.loginBox input 
@@ -131,7 +131,8 @@ div.loginBox
     height: 30px;
     margin-bottom: 25px;
     padding: 3px 5px;
-    outline: none; 
+    outline: none;
+  	color: #000000; 
   }
   div.loginBox .loginButtons 
   {
@@ -194,19 +195,18 @@ body { margin:0; padding:0; }
 * on the page. */
 .map-overlay {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.8);
-    margin-right: 20px;
-    font-family: Arial, sans-serif;
-    overflow: auto;
-    border-radius: 3px;
+    left: 0;
+    background: #FFFFFF;
 }
 #features {
-    top: 0;
-    height: 100px;
+    top: 140px;
+    left: 30px;
+    height: 70%;
     margin-top: 20px;
-    width: 250px;
+    width: 20%;
+    padding: 20px;
+    display: none;
+    border-radius: 5px;
 }
 #legend {
     padding: 10px;
@@ -222,4 +222,16 @@ body { margin:0; padding:0; }
     width: 10px;
     height: 10px;
     margin-right: 5px;
+}
+
+#geocoder-container {
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    width: 100%;
+    margin-top: 10px;
+}
+#geocoder-container > div {
+    
+    width: 20%;
 }
