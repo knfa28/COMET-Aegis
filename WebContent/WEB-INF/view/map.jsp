@@ -13,9 +13,10 @@
 	<div id='map'></div>
 	<div id='geocoder-container'></div>
 	
-	<div class='map-overlay' id='features'><h2>Data and Analytics</h2><div id='pd'></div></div>
+	<div class='map-overlay' id='features'><h1>Data and Analytics</h1><div id='pd'></div></div>
 	
 	<script>
+		//map setup	
 		mapboxgl.accessToken = 'pk.eyJ1IjoiZ2Vsb2tvIiwiYSI6ImNpcXRodjFtbzAwNHBnMm5oMG44ODNkNG8ifQ.S-yhFFEeGzplgbc_EXPkvg';
 		
 		var map = new mapboxgl.Map({
@@ -36,12 +37,13 @@
 			  
 			});
 		
+		//onclick
 		map.on('click', function (e) {
 			  var data = map.queryRenderedFeatures(e.point);
 			  
 			  if (data.length > 0) 
 			  {
-				  if(data[0].layer.id == "Metro Manila Barangays")
+				  if(data[0].layer.id == "MetroManilaBarangays")
 				  {
 					  document.getElementById('features').style.display = "block";
 				      document.getElementById('pd').innerHTML = "<h3><strong>Brgy. " + data[0].properties.name + "</strong></h3><br>";	
@@ -49,8 +51,13 @@
 				  else if(data[0].layer.id == "> Magnitude 7 Earthquakes" || data[0].layer.id == "Between 3.5 and 7 magnitude Earthquakes" || data[0].layer.id == "< Magnitude 3.5 Earthquakes")
 				  {
 					  document.getElementById('features').style.display = "block";
-			      	  document.getElementById('pd').innerHTML = "<h3><strong>" + data[0].properties.magnitude + " Magnitude Earthquake </br><br></strong></h3><h4>" + data[0].properties.title + "<br><br>" + data[0].properties.date + "<h4>";	
+			      	  document.getElementById('pd').innerHTML = "<br><h4>Magnitude " + data[0].properties.magnitude + " Earthquake <br></h4><h4>Date and Time: " + data[0].properties.date + "<br><br>Location: " + data[0].properties.title + "<h4><br><h6>Source: http://www.phivolcs.dost.gov.ph/</h6>";	
 				 
+				  }
+				  else if(data[0].layer.id == "Very High" || data[0].layer.id == "High" || data[0].layer.id == "Medium" || data[0].layer.id == "Low" || data[0].layer.id == "Very Low")
+				  {
+					  document.getElementById('features').style.display = "block";
+			      	  document.getElementById('pd').innerHTML = "<br><h4>Region: " + data[0].properties.REGION + "<br><br>Province: " + data[0].properties.PROVINCE + "<br><br>Typhoon Risk: " + data[0].layer.id + "</h4> <br><h6>Source: http://vm.observatory.ph/</h6>";
 				  }
 				  else
 				  {
@@ -64,32 +71,6 @@
 			      document.getElementById('features').style.display = "none";
 			  }
 			});
-		
-		//switch layers
-		var layerList = document.getElementById('icons');
-		var inputs = layerList.getElementsByTagName('div');
-		
-		function switchLayer(layer) {
-		    var layerId = layer.target.id;
-		    
-		    if(layerId == 'flood')
-	    	{
-				map.setStyle('mapbox://styles/geloko/cird4c5ql000hgfm4jyzfejab');
-	    	}
-		    if(layerId == 'storm')
-	    	{
-		    	map.setStyle('mapbox://styles/geloko/cird4bj9a000hgcnkuqrujccn');
-		    	//map.setStyle('mapbox://styles/mapbox/satellite-v9');
-			}
-		    if(layerId == 'earthquake')
-		    {
-		    	map.setStyle('mapbox://styles/geloko/ciqthvpn0000fc8mbycfye3fi');
-			}
-		}
-		
-		for (var i = 0; i < inputs.length; i++) {
-		    inputs[i].onclick = switchLayer;
-		}
 	</script>
 </div>
 

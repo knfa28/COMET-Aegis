@@ -16,6 +16,7 @@
     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
     rel="stylesheet" type="text/css">
 	<script src="<c:url value="/resources/js/login.js" />" type="text/javascript"></script>
+	<script src="<c:url value="/resources/js/switchLayers.js" />" type="text/javascript"></script>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="index.jsp" class="navbar-brand"><span style="font-size: 200%;">Aegis</span></a>
+          <a href="home" class="navbar-brand" style = "margin-top:10px;"><span style="font-size: 200%;">Aegis</span></a>
         </div>
         <div id="icons" data-toggle="collapse" data-target="#navbar-ex-collapse">
             <ul id="icons-nav">
@@ -45,11 +46,11 @@
         </div>
           <ul id="rightnav">
 			<li>
-				<a href="#">Infographics</a>
+				<a href="infographics">Infographics</a>
 			</li>
 			
 			<li>
-				<a href="contactNumbers.jsp">Contact Numbers</a>
+				<a href="contactNum">Contact Numbers</a>
 			</li>
 			
 			<li>
